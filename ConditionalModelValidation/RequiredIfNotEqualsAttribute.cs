@@ -11,7 +11,7 @@ namespace ConditionalModelValidation {
 		public override bool RequiresValidationContext { get { return true; } }
 
 		public RequiredIfNotEqualsAttribute(string otherPropertyName, object otherPropertyValue = null)
-				: base("'{0}' is required because '{1}' is equal to '{2}'.") {
+				: base("'{0}' is required because '{1}' is not equal to '{2}'.") {
 			OtherPropertyName = otherPropertyName;
 			OtherPropertyValue = otherPropertyValue;
 		}
